@@ -1,0 +1,22 @@
+''' Read input from STDIN. Print your output to STDOUT '''
+    #Use input() to read input from STDIN and use print to write your output to STDOUT
+
+def main():
+
+ # Write code here 
+
+    N = int(input())
+    # print(N)
+    girl = input()
+    girl_quantity = girl.split()
+    lab = input()
+    lab_quantity = lab.split()
+    
+    powerpuff_girls = [1]*N
+    
+    for i in range(N):
+        powerpuff_girls[i] = int(lab_quantity[i])/int(girl_quantity[i])
+    
+    print(int(min(powerpuff_girls)))
+
+main()
