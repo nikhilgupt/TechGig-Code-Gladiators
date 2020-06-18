@@ -1,0 +1,26 @@
+''' Read input from STDIN. Print your output to STDOUT '''
+    #Use input() to read input from STDIN and use print to write your output to STDOUT
+
+def main() :
+    
+    # Write code here 
+    T = int(input())
+    for i in range(T) :
+        N = int(input())
+        wins = 0
+        opp = 0
+        
+        team_power = list(map(int, input().split()))
+        opp_power = list(map(int, input().split()))
+            
+        team_power.sort(reverse = True)
+        opp_power.sort(reverse = True)
+        
+        while(opp < N) :
+            if team_power[wins] > opp_power[opp]:
+                opp += 1
+                wins += 1
+            else:
+                opp += 1
+        print(wins)
+main()
